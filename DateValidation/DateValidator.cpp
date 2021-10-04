@@ -106,7 +106,7 @@ int main()
 	}
 	else if ((month == 4 || month == 6 || month == 9 || month == 11) && (day == 31))
 	{
-		cout << "The day in " << newMonth << " cannot be 31.";
+		cout << month << "/" << day << "/" << year << " is not a valid date. The day in " << newMonth << " cannot be 31.";
 	}
 	else if (leapYear == 1)
 	{
