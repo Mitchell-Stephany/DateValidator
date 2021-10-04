@@ -24,13 +24,13 @@ using namespace std;
 		cin>> month;cin>> day;cin>> year;
 
 		if(month < 1 || month >12)
-				cout<<month<<"/"<<day<<"/"<<year<<" is not a valid date; "<<"The month must be in the interval [1,12].";
+				cout<<month<<"/"<<day<<"/"<<year<<" is not a date; "<<"The month must be in the interval [1,12].";
 
 		else if(day < 1 || day >31)
-				cout<<month<<"/"<<day<<"/"<<year<<" is not a valid date; "<<"The day must be in the interval [1,31].";
+				cout<<month<<"/"<<day<<"/"<<year<<" is not a date; "<<"The day must be in the interval [1,31].";
 
 		else if(year < 1583)
-				cout<<month<<"/"<<day<<"/"<<year<<" is not a valid date; "<<"The year must come after 1582.";
+				cout<<month<<"/"<<day<<"/"<<year<<" is not a date; "<<"The year must come after 1582.";
 
 
 		if(month == 2 && day <= 28)
@@ -41,51 +41,41 @@ using namespace std;
 			cout<<month<<"/"<<day<<"/"<<year<<" is not a valid date; "<<"The day in February cannot be greater than 29. ";
 
 
-		if((month == 1 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && (day <= 31) && (year >= 1583))
-			cout<<"The date "<<month<<"/"<<day<<"/"<<year<<" is in a";
-
-		if((month == 4 || month == 6 || month == 9 || month == 11) && (day <= 30) && (year >= 1583))
-			cout<<"The date "<<month<<"/"<<day<<"/"<<year<<" is in a";
-		else if(day == 31)
-			cout<<"The day in "<<month<<"cannot be 31.";
+		if((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && (day <= 31) && (year >= 1583))
+			cout<<"The date ";
 
 		if(month == 1)
-			cout<< "January";
-		else if(month == 2)
-			cout<< "February";
+			cout<<"January";
 		else if(month == 3)
 			cout<< "March";
-		else if(month == 4)
-			cout<< "April";
 		else if(month == 5)
-			cout<< "May";
-		else if(month == 6)
-			cout<< "June";
+			cout<<"May";
 		else if(month == 7)
-			cout<< "July";
+			cout<<"July";
 		else if(month == 8)
-			cout<< "August";
-		else if(month == 9)
-			cout<< "September";
+			cout<<"August";
 		else if(month == 10)
-			cout<< "October";
-		else if(month == 11)
-			cout<< "November";
+			cout<<"October";
 		else if(month == 12)
-			cout<< "December";
+			cout<<"December";
 
-		if (year % 4 == 0) {
-			if (year % 100 == 0) {
-				if (year % 400 == 0)
-					cout <<"leap year.";
-				else
-				    cout <<" common year.";
-				        }
-			else
-				    cout <<" leap year.";
-				    }
-		else
-				    cout <<" common year.";
+//		cout<<day<<","<<year<<" is in a";
+
+		if((month == 4 || month == 6 || month == 9 || month == 11) && (day <= 30) && (year >= 1583))
+			cout<<"The date "<<day<<","<<year<<" is in a";
+		else if((month == 4 || month == 6 || month == 9 || month == 11) && day == 31)
+			cout<<"The day in ";
+
+
+
+		if(month == 4)
+			cout<< "April cannot be 31.";
+		if(month == 6)
+			cout<< "June cannot be 31.";
+		if(month == 9)
+			cout<< "September cannot be 31.";
+		if(month == 11)
+			cout<< "November cannot be 31.";
 
 		}
 
