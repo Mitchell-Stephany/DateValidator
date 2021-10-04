@@ -20,14 +20,11 @@ int main()
 	int month; int day; int year;
 	cin >> month; cin >> day; cin >> year;
 	string newMonth;
-	int leapYear;
+	int leapYear = 0;
+
 	if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
 	{
 		leapYear = 1;
-	}
-	else
-	{
-		leapYear = 0;
 	}
 	if(month == 1)
 	{
