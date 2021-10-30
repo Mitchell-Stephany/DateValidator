@@ -23,7 +23,7 @@ int main()
 	int leapYear = 0;
 	string newMonth;
 	string months[] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-	for (int i; i <= 11; i++){
+	for (int i = 0; i <= 11; i++){
 		if ((month - 1) == i){
 			newMonth = months[i];
 		}
